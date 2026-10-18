@@ -1,6 +1,8 @@
 ﻿using DesignPatterns.Abstract_Factory;
 using DesignPatterns.Abstract_Factory.Mobile;
 using DesignPatterns.Abstract_Factory.Web;
+using DesignPatterns.Adapter.Classes;
+using DesignPatterns.Adapter.Interfaces;
 using DesignPatterns.Builder;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
@@ -66,7 +68,14 @@ namespace DesignPatterns
 
             #endregion
 
+            #region Adapter Pattern
+            //var gateway = new ExternalPaymentGateway();
+            //IPaymentServices payment = new PaymentAdapter(gateway);
+            //var order = new OrderServices(payment);
+            //order.Checkout(1500m);
 
+
+            #endregion
 
 
         }
