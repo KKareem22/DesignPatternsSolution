@@ -4,6 +4,8 @@ using DesignPatterns.Abstract_Factory.Web;
 using DesignPatterns.Adapter.Classes;
 using DesignPatterns.Adapter.Interfaces;
 using DesignPatterns.Builder;
+using DesignPatterns.Decorators;
+using DesignPatterns.Facade;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
 using DesignPatterns.Strategy;
@@ -14,6 +16,8 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region Creational Design Pattterns
+
             #region Singleton Pattern
             //ConfigurationManager.Test();
             //Console.WriteLine("Function01 Stared");
@@ -68,6 +72,9 @@ namespace DesignPatterns
 
             #endregion
 
+            #endregion
+
+            #region Structural Design Patterns
             #region Adapter Pattern
             //var gateway = new ExternalPaymentGateway();
             //IPaymentServices payment = new PaymentAdapter(gateway);
@@ -76,8 +83,44 @@ namespace DesignPatterns
 
 
             #endregion
+            #region Facade Pattern
+            //var coffeeMachine=new CoffeeMachineFacade();
+            //coffeeMachine.MakeCoffee();
 
 
+            #region Explanation
+            /*Facade pattern simplifies the interface for complex subsystems,
+                 * making it easier to use and understand. In this example, 
+                 * the CoffeeMachineFacade class provides a simple method to make coffee, 
+                 * hiding the complexity of the underlying services like CoffeeBeanService, WaterHeaterService, and CoffeeMakerService.
+                */
+            #endregion
+
+            #endregion
+            #region Decorators
+            //// Decorator pattern allows behavior to be added to individual objects,
+            //ICoffee coffee = new SimpleCoffee();
+            //coffee.Display();
+            //// Adding milk to the coffee using the MilkDecorator
+            //coffee = new MilkDecorator(coffee);
+            //coffee.Display();
+            //// Adding caramel to the coffee using the CaramelDecorator
+            //coffee = new CaramelDecorator(coffee);
+            //coffee.Display();
+
+
+
+            #endregion
+
+
+
+            #endregion
+
+
+
+            #region Behavioral Design Patterns
+
+            #endregion
         }
     }
 }
