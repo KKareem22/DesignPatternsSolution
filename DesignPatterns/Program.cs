@@ -9,6 +9,7 @@ using DesignPatterns.Composite;
 using DesignPatterns.Decorators;
 using DesignPatterns.Facade;
 using DesignPatterns.Factory;
+using DesignPatterns.Flyweight;
 using DesignPatterns.Singleton;
 using DesignPatterns.Strategy;
 
@@ -145,7 +146,29 @@ namespace DesignPatterns
             //urgentEmail.Notify("Your payment needs attention.");
 
             #endregion
+            #region Flyweight Pattern
+            TreeFactory factory = new TreeFactory();
+            TreeType pineType1 = factory.GetTreeType("Pine", "Green", "PineTexture");
+            var pineType2 = factory.GetTreeType("Pine", "Green", "PineTexture");
+            var oakType = factory.GetTreeType("Oak", "Dark Green", "OakTexture");
+            // Each tree has its own position
+            List<Tree> trees = new()
+            {
+                new Tree(20,30,pineType1),
+                new Tree(40,50,pineType2),
+                new Tree(60,70,oakType)
+            };
+            Console.WriteLine("\nDrawing trees:");
 
+            foreach (var tree in trees)
+            {
+                tree.Draw();
+            }
+            Console.WriteLine(
+           $"\nSame Pine object? {ReferenceEquals(pineType1, pineType2)}");
+
+            Console.ReadKey();
+            #endregion
 
 
             #endregion
