@@ -3,7 +3,9 @@ using DesignPatterns.Abstract_Factory.Mobile;
 using DesignPatterns.Abstract_Factory.Web;
 using DesignPatterns.Adapter.Classes;
 using DesignPatterns.Adapter.Interfaces;
+using DesignPatterns.Bridge;
 using DesignPatterns.Builder;
+using DesignPatterns.Composite;
 using DesignPatterns.Decorators;
 using DesignPatterns.Facade;
 using DesignPatterns.Factory;
@@ -109,6 +111,38 @@ namespace DesignPatterns
             //coffee.Display();
 
 
+
+            #endregion
+            #region Composite Pattern
+            //// Create individual files
+            //IFileSystemComponent file01 = new FileItem("Report1.pdf");
+            //IFileSystemComponent file02 = new FileItem("Photo01.png");
+            //IFileSystemComponent file03 = new FileItem("Notes.txt");
+            //// Create a subfolder
+            //var imageFolder = new Folder("Images");
+            //imageFolder.Add(file02);
+            //// Create the root folder
+            //var rootFolder = new Folder("MyDocument");
+            //rootFolder.Add(file01);
+            //rootFolder.Add(imageFolder);
+            //rootFolder.Add(file03);
+
+            //rootFolder.Display();
+
+            //Console.ReadKey();
+
+
+
+            #endregion
+            #region Bridge Pattern
+            //Notification basicEmail = new BasicNotification(new EmailSender());
+            //basicEmail.Notify("Your order has been confirmed.");
+            //Console.WriteLine(new string('/',20));
+            //Notification urgentSMS = new UrgentNotification(new SMSSender());
+            //urgentSMS.Notify("Your booking starts in 10 minutes.");
+            //Console.WriteLine(new string('/',20));
+            //Notification urgentEmail = new UrgentNotification(new EmailSender());
+            //urgentEmail.Notify("Your payment needs attention.");
 
             #endregion
 
